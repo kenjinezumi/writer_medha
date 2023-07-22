@@ -1,0 +1,21 @@
+<!-- contact.html -->
+{% extends 'base.html' %}
+
+{% block content %}
+  <h1 class="title-heading">Contact</h1>
+  {% for content in contact %}
+        <p>{{ content.content }}</p>
+ {% if not forloop.last %}
+      <hr class="line-separator">
+    {% endif %}
+  {% endfor %}
+ <div class="form-container">
+    <form id="contact-form" method="post" novalidate>
+      {% csrf_token %}
+      {{ form.as_p }}
+      <button type="submit" id="submit-button">Send</button>
+      <p id="error-notification" style="display: none; color: red;">Please fill in all required fields.</p>
+    </form>
+  </div>
+{% endblock %}
+

@@ -1,0 +1,72 @@
+<!-- writer/templates/base.html -->
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Medha Singh</title>
+  <!-- Add your CSS link here -->
+  <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+  <!-- Rest of your head content -->
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <div class="container">
+
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav navbar-nav-centered">
+             <li class="nav-item">
+              <a class="nav-link" href="{% url 'home' %}">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="{% url 'publications' %}">Publications</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="{% url 'editorial' %}">Editorial</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="{% url 'prose' %}">Prose</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="{% url 'interviews' %}">Interviews and press</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="{% url 'contact' %}">Contact</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="{% url 'about' %}">About</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Center "Medha Singh" -->
+<div class="centered-text">
+  Medha Singh
+</div>
+
+  </header>
+
+
+  <!-- Main content of each page -->
+  <main>
+    {% block content %}{% endblock %}
+  </main>
+
+  <!-- Footer -->
+  <footer class="mt-5">
+    <div class="container text-center">
+      {% now "Y" as current_year %}
+      {{ current_year }} @ Medha Singh
+    </div>
+  </footer>
+
+
+  <!-- Add your Bootstrap and JS scripts here -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

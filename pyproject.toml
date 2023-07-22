@@ -1,0 +1,17 @@
+[tool.poetry]
+name = "writer-medha"
+version = "0.1.0"
+description = "Medha Singh's website"
+authors = ["kenji <kenjitsuchiya1@gmail.com>"]
+readme = "README.md"
+packages = [{include = "writer_medha"}]
+
+[tool.poetry.dependencies]
+python = "^3.11"
+django = "^4.2.3"
+django-ckeditor = "^6.6.1"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

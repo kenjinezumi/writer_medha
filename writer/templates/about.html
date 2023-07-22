@@ -1,0 +1,17 @@
+<!-- about.html -->
+{% extends 'base.html' %}
+
+{% block content %}
+  <h1 class="title-heading">About</h1>
+
+  {% for content in about %}
+    <p>{{ content.content }}</p>
+    {% if not forloop.last %}
+      <hr class="line-separator">
+    {% endif %}
+  {% endfor %}
+ <h3 class="pdf-heading">Download my resume</h3>
+  {% for pdf in about_pdfs %}
+    <a href="{{ pdf.pdf_file.url }}" download="{{ pdf.title }}">{{ pdf.title }}</a><br>
+  {% endfor %}
+{% endblock %}

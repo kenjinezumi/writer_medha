@@ -1,0 +1,13 @@
+<!-- interviews.html -->
+{% extends 'base.html' %}
+
+{% block content %}
+  <h1 class="title-heading">Interviews</h1>
+  {% for content in interview %}
+    <p>{{ content.content }}</p>
+ {% if not forloop.last %}
+      <hr class="line-separator">
+    {% endif %}  {% endfor %}
+{% endblock %}
+
+

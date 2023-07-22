@@ -1,0 +1,178 @@
+/* Body styles */
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-color: #ffffff; /* White background */
+  margin: 0; /* Reset default body margin */
+}
+
+/* Header styles */
+header {
+  background-color: #ffffff; /* Light gray header background */
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center the content horizontally */
+}
+
+/* Styles for the title page heading */
+.title-heading {
+  font-size: 24px; /* Adjust the font size as needed */
+}
+
+.navbar {
+  display: flex;
+  justify-content: center; /* Center the navigation links horizontally */
+  align-items: center; /* Vertically center the content within the navbar */
+  padding-top: 10px; /* Adjust the spacing if needed */
+  padding-bottom: 10px; /* Adjust the spacing if needed */
+}
+
+.navbar-brand {
+  font-size: 24px;
+  font-weight: bold;
+  color: #333; /* Dark gray font color */
+}
+
+/* Custom class to center navbar items */
+.navbar-nav-centered {
+  display: flex;
+  align-items: center; /* Vertically center the content within the navbar */
+  margin-top: 10px;
+  list-style: none; /* Remove default list styles */
+  padding: 0; /* Reset padding */
+}
+
+.nav-item {
+  margin-right: 10px;
+}
+
+.nav-link {
+  color: #333; /* Dark gray font color */
+  transition: color 0.2s ease;
+}
+
+.nav-link:hover {
+  color: #007bff; /* Pastel blue on hover */
+}
+
+/* Main content styles */
+main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center the content horizontally */
+  background-color: #ffffff; /* White background for main content */
+  padding: 20px;
+  max-width: 60%; /* Limit the width of the main content to 50% */
+  margin: 0 auto; /* Center the main content horizontally */
+}
+
+hr.line-separator {
+  margin:80px;
+  width:70px;
+  border: none;
+  height: 2px;
+  background-color: #010203;
+  margin: 50px 0;
+}
+
+/* Centered text styles */
+.centered-text {
+  position: relative;
+  font-size: 20px;
+  font-family: "Georgia", serif; /* A classy and elegant font */
+  color: #333; /* Dark gray font color */
+  margin-top: 30px; /* Adjust the spacing if needed */
+  text-transform: uppercase; /* Uppercase to add emphasis and formality */
+}
+
+/* Simple line effect */
+.centered-text::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: -5px; /* Adjust the distance of the line from the text */
+  transform: translateX(-50%);
+  width: 120px; /* Adjust the width of the line */
+  height: 1px; /* Adjust the height of the line */
+  background-color: #333; /* Dark gray line color */
+}
+
+/* Footer styles */
+footer {
+  background-color: #ffffff; /* Light gray footer background */
+  padding: 20px 0;
+  text-align: center;
+  color: #333; /* Dark gray font color */
+}
+
+.publication {
+  text-align: center;
+}
+
+/* Style for the form container */
+.form-container {
+  max-width: 600px; /* Increase the maximum width of the form container */
+  margin: 0 auto;
+  padding: 10px; /* Increase the padding for a more spacious look */
+  background-color: #ffffff; /* White background */
+  border-radius: 10px; /* Add some border radius for a rounded look */
+}
+
+/* Style for form fields */
+#contact-form label {
+  font-weight: bold; /* Bold font for form field labels */
+  margin-bottom: 10px; /* Add some margin between the label and form fields */
+}
+
+#contact-form input[type="text"],
+#contact-form input[type="email"],
+#contact-form textarea {
+  width: 100%;
+  padding: 12px; /* Increase the padding for a more comfortable feel */
+  margin-top: 10px; /* Add some extra margin between form fields */
+  margin-bottom: 15px; /* Add some extra margin between form fields */
+  border: 1px solid #dcdcdc; /* Light gray border */
+  border-radius: 5px;
+  font-size: 16px;
+  background-color: #ffffff; /* White background for form fields */
+  font-weight: bold; /* Bold font for form fields */
+}
+
+/* Style for subject, email, and content fields */
+#contact-form input[type="text"],
+#contact-form input[type="email"],
+#contact-form textarea {
+  padding: 14px; /* Slightly increase the padding for subject, email, and content fields */
+}
+
+#contact-form textarea {
+  resize: vertical;
+  min-height: 150px;
+}
+
+/* Style for the submit button */
+#submit-button {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 12px 20px; /* Increase the padding for a more prominent button */
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  font-weight: bold; /* Bold font for the submit button */
+}
+
+#submit-button:hover {
+  background-color: #0056b3;
+}
+
+/* Style for the error notification */
+#error-notification {
+  color: red;
+  text-align: center;
+  margin-top: 10px;
+}

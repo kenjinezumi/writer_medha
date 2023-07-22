@@ -1,0 +1,14 @@
+<!-- home.html -->
+{% extends 'base.html' %}
+
+{% block content %}
+  <h1 class="title-heading">Home</h1>
+  {% for content in home %}
+    <p>{{ content.content }}</p>
+ {% if not forloop.last %}
+      <hr class="line-separator">
+    {% endif %}
+  {% endfor %}
+{% endblock %}
+
+
