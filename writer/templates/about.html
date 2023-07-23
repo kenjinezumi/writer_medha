@@ -2,7 +2,7 @@
 {% extends 'base.html' %}
 
 {% block content %}
-  <h1 class="title-heading">About</h1>
+  <h1 class="title-heading">about</h1>
 
   {% for content in about %}
     <p>{{ content.content }}</p>
@@ -11,6 +11,6 @@
     {% endif %}
   {% endfor %}
   {% for pdf in about_pdfs %}
-    <a class="download-link" href="{{ pdf.pdf_file.url }}" download="{{ pdf.title }}">Download my Curriculum Vitae</a><br>
+    <a class="download-link" href="{{ pdf.pdf_file.url }}" download="{{ pdf.title }}">curriculum vitae</a><br>
   {% endfor %}
 {% endblock %}

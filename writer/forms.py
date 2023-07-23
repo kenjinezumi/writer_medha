@@ -6,9 +6,9 @@ from writer.models import AboutPDF
 
 
 class ContactForm(forms.Form):
-    subject = forms.CharField(max_length=200, required=False)
-    email = forms.EmailField( required=False)
-    message = forms.CharField(widget=forms.Textarea,  required=False)
+    subject = forms.CharField(max_length=200, required=False, label="subject")
+    email = forms.EmailField( required=False, label="email")
+    message = forms.CharField(widget=forms.Textarea,  required=False, label="message")
     def clean(self):
         cleaned_data = super().clean()
         subject = cleaned_data.get('subject')
