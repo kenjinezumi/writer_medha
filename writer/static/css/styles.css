@@ -1,10 +1,43 @@
 /* Body styles */
+
+html {
+    height: 100%;
+}
 body {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  background-color: #ffffff; /* White background */
   margin: 0; /* Reset default body margin */
+}
+
+/* Main container styles */
+.main-container {
+  display: flex;
+  flex: 1; /* Make the main container flex and take full height */
+}
+
+/* Left column styles */
+.left-column {
+  flex: 0 0 70%;
+  padding: 20px;
+
+}
+
+.right-column {
+  flex: 0 0 30%; /* Width: 40%; don't grow or shrink */
+  background-color: #8EA69B; /* Green background */
+  display: flex; /* Use flexbox for content alignment */
+  flex-direction: column; /* Align content vertically */
+  align-items: center; /* Center content horizontally */
+  justify-content: center; /* Center content vertically */
+  padding: 20px; /* Add padding to the right column */
+}
+
+.right-column img {
+  max-width: 80%; /* Set the image width to 80% of the right column */
+  max-height: 100%; /* Maintain the image's aspect ratio */
+  padding: 10px; /* Add padding to the image (left, right, and top) */
+  box-sizing: border-box; /* Include padding in the image's width */
 }
 
 /* Header styles */
@@ -70,8 +103,8 @@ main {
 }
 
 hr.line-separator {
-  margin:80px;
-  width:70px;
+  margin: 80px;
+  width: 70px;
   border: none;
   height: 2px;
   background-color: #010203;
@@ -106,12 +139,12 @@ footer {
   padding: 20px 0;
   text-align: center;
   color: #333; /* Dark gray font color */
-}
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 70%; /* Make sure the footer spans the entire width of the viewport */
 
-.publication {
-  text-align: center;
 }
-
 /* Style for the form container */
 .form-container {
   max-width: 600px; /* Increase the maximum width of the form container */
@@ -176,3 +209,4 @@ footer {
   text-align: center;
   margin-top: 10px;
 }
+

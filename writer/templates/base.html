@@ -1,4 +1,3 @@
-<!-- writer/templates/base.html -->
 {% load static %}
 <!DOCTYPE html>
 <html>
@@ -9,60 +8,70 @@
   <!-- Rest of your head content -->
 </head>
 <body>
-  <!-- Header -->
-  <header>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-      <div class="container">
+  <!-- Main container with two columns -->
+  <div class="main-container">
+    <!-- Left column with header, navbar, main content, and footer -->
+    <div class="left-column">
+      <!-- Header -->
+      <header>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+          <div class="container">
 
-        <div class="collapse navbar-collapse" id="navbarNav">
-          <ul class="navbar-nav navbar-nav-centered">
-             <li class="nav-item">
-              <a class="nav-link" href="{% url 'home' %}">Home</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="{% url 'publications' %}">Publications</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="{% url 'editorial' %}">Editorial</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="{% url 'prose' %}">Prose</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="{% url 'interviews' %}">Interviews and press</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="{% url 'contact' %}">Contact</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="{% url 'about' %}">About</a>
-            </li>
-          </ul>
+            <div class="collapse navbar-collapse" id="navbarNav">
+              <ul class="navbar-nav navbar-nav-centered">
+                <li class="nav-item">
+                  <a class="nav-link" href="{% url 'home' %}">home</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="{% url 'publications' %}">publications</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="{% url 'editorial' %}">editorial</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="{% url 'prose' %}">prose</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="{% url 'interviews' %}">interviews and press</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="{% url 'contact' %}">contact</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="{% url 'about' %}">about</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+
+        <!-- Center "Medha Singh" -->
+        <div class="centered-text">
+          Medha Singh
         </div>
-      </div>
-    </nav>
+      </header>
 
-    <!-- Center "Medha Singh" -->
-<div class="centered-text">
-  Medha Singh
-</div>
+      <!-- Main content of each page -->
+      <main>
+        {% block content %}{% endblock %}
+      </main>
 
-  </header>
-
-
-  <!-- Main content of each page -->
-  <main>
-    {% block content %}{% endblock %}
-  </main>
-
-  <!-- Footer -->
-  <footer class="mt-5">
-    <div class="container text-center">
-      {% now "Y" as current_year %}
-      {{ current_year }} @ Medha Singh
+      <!-- Footer -->
+      <footer class="mt-5">
+        <div class="container text-center">
+          {% now "Y" as current_year %}
+          {{ current_year }} @ Medha Singh
+        </div>
+      </footer>
     </div>
-  </footer>
 
+    <!-- Right column with green background -->
+    <div class="right-column">
+
+        <img src="{% static 'image/IMG-20230723-WA0001.jpg' %}" alt="Image description">
+
+    </div>
+  </div>
 
   <!-- Add your Bootstrap and JS scripts here -->
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
