@@ -10,8 +10,7 @@
       <hr class="line-separator">
     {% endif %}
   {% endfor %}
- <h3 class="pdf-heading">Download my resume</h3>
   {% for pdf in about_pdfs %}
-    <a href="{{ pdf.pdf_file.url }}" download="{{ pdf.title }}">{{ pdf.title }}</a><br>
+    <a class="download-link" href="{{ pdf.pdf_file.url }}" download="{{ pdf.title }}">Download my Curriculum Vitae</a><br>
   {% endfor %}
 {% endblock %}

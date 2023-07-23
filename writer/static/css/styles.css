@@ -1,42 +1,52 @@
 /* Body styles */
-
 html {
-    height: 100%;
+  height: 100%;
 }
+
 body {
   min-height: 100vh;
+
   display: flex;
   flex-direction: column;
   margin: 0; /* Reset default body margin */
+  font-family: "Montserrat", sans-serif;
+  line-height: 1.5em;
+  letter-spacing: 0.1em;
+  overscroll-behavior: none;
+  overflow-x: hidden; /* Prevent horizontal scrolling on larger screens */
 }
 
 /* Main container styles */
 .main-container {
+  min-height: 100vh; /* Set the main container to take at least the full viewport height */
+
   display: flex;
   flex: 1; /* Make the main container flex and take full height */
+  overflow-x: hidden; /* Hide horizontal scrollbar */
 }
 
 /* Left column styles */
 .left-column {
   flex: 0 0 70%;
   padding: 20px;
-
 }
 
 .right-column {
-  flex: 0 0 30%; /* Width: 40%; don't grow or shrink */
+  flex: 0 0 30%; /* Width: 30%; don't grow or shrink */
   background-color: #8EA69B; /* Green background */
+  position: relative; /* Set the right column container to be relative for absolute positioning */
+  padding: 20px; /* Add padding to the right column */
   display: flex; /* Use flexbox for content alignment */
   flex-direction: column; /* Align content vertically */
-  align-items: center; /* Center content horizontally */
-  justify-content: center; /* Center content vertically */
-  padding: 20px; /* Add padding to the right column */
+  align-items: flex-start; /* Align content to the top */
 }
 
 .right-column img {
+  position: fixed; /* Set the image container to have a fixed position */
+  top: 0; /* Fix the image at the top of the right column */
   max-width: 80%; /* Set the image width to 80% of the right column */
-  max-height: 100%; /* Maintain the image's aspect ratio */
-  padding: 10px; /* Add padding to the image (left, right, and top) */
+  max-height: 60%; /* Maintain the image's aspect ratio */
+  padding: 20px; /* Add padding to the image */
   box-sizing: border-box; /* Include padding in the image's width */
 }
 
@@ -84,6 +94,7 @@ header {
 .nav-link {
   color: #333; /* Dark gray font color */
   transition: color 0.2s ease;
+  text-decoration: none;
 }
 
 .nav-link:hover {
@@ -98,7 +109,7 @@ main {
   align-items: center; /* Center the content horizontally */
   background-color: #ffffff; /* White background for main content */
   padding: 20px;
-  max-width: 60%; /* Limit the width of the main content to 50% */
+  max-width: 60%; /* Limit the width of the main content to 60% */
   margin: 0 auto; /* Center the main content horizontally */
 }
 
@@ -118,7 +129,6 @@ hr.line-separator {
   font-family: "Georgia", serif; /* A classy and elegant font */
   color: #333; /* Dark gray font color */
   margin-top: 30px; /* Adjust the spacing if needed */
-  text-transform: uppercase; /* Uppercase to add emphasis and formality */
 }
 
 /* Simple line effect */
@@ -135,16 +145,17 @@ hr.line-separator {
 
 /* Footer styles */
 footer {
+
   background-color: #ffffff; /* Light gray footer background */
   padding: 20px 0;
   text-align: center;
-  color: #333; /* Dark gray font color */
-  position: fixed;
+  margin-top:auto;
   bottom: 0;
   left: 0;
-  width: 70%; /* Make sure the footer spans the entire width of the viewport */
-
+  color: #333; /* Dark gray font color */
+  width: 100%; /* Make sure the footer spans the entire width of the viewport */
 }
+
 /* Style for the form container */
 .form-container {
   max-width: 600px; /* Increase the maximum width of the form container */
@@ -210,3 +221,46 @@ footer {
   margin-top: 10px;
 }
 
+/* Hide the right column on smaller screens */
+@media only screen and (max-width: 768px) {
+  div.right-column {
+    display: none;
+  }
+}
+
+/* Stack the navbar vertically on smaller screens */
+@media only screen and (max-width: 768px) {
+  .navbar-nav-centered {
+    flex-direction: column;
+    align-items: center;
+  }
+  /* Add spacing between navbar elements on small screens */
+  .navbar-nav-centered li {
+    margin-bottom: 10px;
+  }
+}
+
+/* Styling for the call-to-action container */
+.cta-container {
+  text-align: center; /* Center align the content */
+  background-color: #333; /* Dark background color */
+  padding: 20px;
+  border-radius: 5px;
+}
+
+/* Styling for the download links */
+.download-link {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #232b2b; /* Blue background color */
+  color: #fff; /* White text color */
+  text-decoration: none;
+  border-radius: 8px;
+  font-size: 16px;
+  margin-bottom: 5px;
+}
+
+/* Style the download links on hover */
+.download-link:hover {
+  background-color: #0056b3; /* Darker blue on hover */
+}

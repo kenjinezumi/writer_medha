@@ -2,7 +2,7 @@
 {% extends 'base.html' %}
 
 {% block content %}
-  <h1 class="title-heading">Publications</h1>
+  <h1 class="title-heading">publications</h1>
   {% for content in publication %}
     <p>{{ content.content }}</p>
  {% if not forloop.last %}
